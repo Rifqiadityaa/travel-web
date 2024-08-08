@@ -1,0 +1,33 @@
+"use client";
+
+import Button from "@/components/Button";
+import { useRouter } from "next/navigation";
+import { FC } from "react";
+
+const Hero: FC = () => {
+  const router = useRouter();
+
+  const onClick = () => {
+    router.push("/home");
+  };
+
+  return (
+    <section className="max-lg:h-[calc(100vh_-_82px)] max-lg:mt-[82px] h-screen bg-[url('/assets/images/hero_bg.webp')] bg-cover absolute w-full flex flex-col max-lg:justify-center justify-end max-lg:items-center items-start gap-6 max-lg:px-4 p-44 max-lg:text-center">
+      <div>
+        <h5 className="max-lg:text-7xl text-9xl font-thesignature max-lg:-mb-6 -mb-14 text-[#D6B66B]">
+          Premium Travel
+        </h5>
+        <p className="text-white font-unbounded max-lg:text-xl text-[3.4rem]">
+          Beyond Expectation
+        </p>
+        <p className="max-lg:text-base text-2xl text-white max-lg:max-w-[400px] max-w-[700px] mt-2">
+          Experience the finest that Indonesia has to offer with our curated
+          selection of premium trips, ensuring comfort every step of the way
+        </p>
+      </div>
+      <Button text="Take me there" onClick={onClick} />
+    </section>
+  );
+};
+
+export default Hero;

@@ -1,6 +1,6 @@
-import { SVGProps } from "react";
+import { FC, SVGProps } from "react";
 
-const ZamroodLogo = (props: SVGProps<SVGSVGElement>) => (
+const ZamroodLogo: FC<SVGProps<SVGSVGElement>> = (props) => (
   <svg
     width={135}
     height={50}

@@ -41,3 +41,8 @@ h6 {
 #__next {
   isolation: isolate;
 }
+
+p,
+li {
+  font-family: var(--font-albert-sans);
+}
