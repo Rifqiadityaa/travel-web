@@ -13,6 +13,11 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      fontFamily: {
+        unbounded: ["var(--font-unbounded)"],
+        albertSans: ["var(--font-albert-sans)"],
+        thesignature: ["var(--font-thesignature)"],
+      },
     },
   },
   plugins: [],
