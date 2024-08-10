@@ -1,7 +1,7 @@
 import { getTotalDayAndNight } from "@/shared/helper";
 import { FC, useMemo } from "react";
-import Button from "../Button";
-import ImageSlider from "../ImageSlider";
+import Button from "../../Button";
+import ImageSlider from "../../ImageSlider";
 import { DestinationCardProps } from "./types";
 
 const DestinationCard: FC<DestinationCardProps> = ({

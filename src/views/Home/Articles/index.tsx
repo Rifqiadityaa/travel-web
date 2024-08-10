@@ -1,6 +1,6 @@
 "use client";
 
-import ArticlesCard from "@/components/ArticlesCard";
+import ArticlesCard from "@/components/Cards/ArticlesCard";
 import useGetArticles from "@/libs/articles/queries/useGetArticles";
 import { FC } from "react";
 

@@ -1,18 +1,23 @@
 import { REACT_QUERY_CACHE_KEYS } from "@/shared/constants/cacheKeys";
 import { useQuery, UseQueryOptions } from "react-query";
-import { BaseReponse } from "../types";
+import { GetItinerariesResponse } from "../types";
 
 const fetchItineraries = async () => {
   const response = await fetch(
     `${process.env.NEXT_PUBLIC_BASE_API_URL}/zamrood/itinerary?highlight=true`
   );
   const data = await response.json();
-  return data as BaseReponse;
+  return data as GetItinerariesResponse;
 };
 
 const useGetItineraries = (
   options?: Omit<
-    UseQueryOptions<BaseReponse, unknown, BaseReponse, string>,
+    UseQueryOptions<
+      GetItinerariesResponse,
+      unknown,
+      GetItinerariesResponse,
+      string
+    >,
     "queryKey" | "queryFn"
   >
 ) => {

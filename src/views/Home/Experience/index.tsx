@@ -1,8 +1,8 @@
 import Button from "@/components/Button";
+import ExperienceCard from "@/components/Cards/ExperienceCard";
 import ExperienceExclusive from "@/components/DynamicAssets/ExperienceExclusive";
 import ExperienceFacilities from "@/components/DynamicAssets/ExperienceFacilities";
 import ExperienceItineraries from "@/components/DynamicAssets/ExperienceItineraries";
-import ExperienceCard from "@/components/ExperienceCard";
 import Image from "next/image";
 import { FC } from "react";
 

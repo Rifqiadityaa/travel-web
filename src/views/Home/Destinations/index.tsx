@@ -1,7 +1,7 @@
 "use client";
 
 import Button from "@/components/Button";
-import DestinationCard from "@/components/DestinationCard";
+import DestinationCard from "@/components/Cards/DestinationCard";
 import useGetItineraries from "@/libs/Itineraries/queries/useGetItineraries";
 import { FC } from "react";
 import { IoIosArrowForward } from "react-icons/io";
@@ -9,7 +9,9 @@ import { IoIosArrowForward } from "react-icons/io";
 const Destinations: FC = () => {
   const { data } = useGetItineraries();
 
-  if (!data) return null;
+  const itineraries = data?.data;
+
+  if (!itineraries) return null;
 
   return (
     <section id="destinations" className="scroll-m-24 lg:scroll-m-36">

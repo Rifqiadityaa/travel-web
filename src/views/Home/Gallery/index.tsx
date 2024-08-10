@@ -8,8 +8,8 @@ import lgThumbnail from "lightgallery/plugins/thumbnail";
 import lgZoom from "lightgallery/plugins/zoom";
 import LightGallery from "lightgallery/react";
 
+import GalleryCard from "@/components//Cards/GalleryCard";
 import ColoredSeparator from "@/components/DynamicAssets/ColoredSeparator";
-import GalleryCard from "@/components/GalleryCard";
 import ImageSlider from "@/components/ImageSlider";
 import useGetItineraries from "@/libs/Itineraries/queries/useGetItineraries";
 import { FC, useMemo } from "react";

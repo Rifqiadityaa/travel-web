@@ -1,10 +1,11 @@
 import Image from "next/image";
+import Link from "next/link";
 import { FC } from "react";
 import { GalleryCardProps } from "./types";
 
 const GalleryCard: FC<GalleryCardProps> = ({ imageSrc }) => {
   return (
-    <a className="relative aspect-square gallery-item" href={imageSrc}>
+    <Link className="relative aspect-square gallery-item" href={imageSrc}>
       <Image
         src={imageSrc}
         alt="scenery images"
@@ -12,7 +13,7 @@ const GalleryCard: FC<GalleryCardProps> = ({ imageSrc }) => {
         fill
         loading="lazy"
       />
-    </a>
+    </Link>
   );
 };
 

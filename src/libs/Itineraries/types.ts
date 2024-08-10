@@ -1,4 +1,4 @@
-export interface BaseReponse {
+export interface GetItinerariesResponse {
   success: boolean;
   message: string;
   code: number;
