@@ -11,15 +11,15 @@ const nextConfig = {
         hostname: "images.unsplash.com",
       },
     ],
-    redirects: async () => {
-      return [
-        {
-          source: "/",
-          destination: "/home",
-          permanent: true,
-        },
-      ];
-    },
+  },
+  redirects: async () => {
+    return [
+      {
+        source: "/",
+        destination: "/home",
+        permanent: true,
+      },
+    ];
   },
 };
 

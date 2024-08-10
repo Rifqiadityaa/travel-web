@@ -14,10 +14,10 @@ const Articles: FC = () => {
   return (
     <section className="flex flex-col gap-6">
       <div className="flex flex-col gap-2">
-        <h1 className="font-unbounded text-4xl font-bold text-[#0B7373]">
+        <h1 className="font-unbounded text-xl lg:text-4xl font-bold text-[#0B7373]">
           Articles
         </h1>
-        <p className="text-2xl text-[#0B7373]">
+        <p className="text-base lg:text-2xl text-[#0B7373]">
           Our curated writings, offering something for every reader.
         </p>
       </div>
