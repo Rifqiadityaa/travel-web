@@ -1,3 +1,4 @@
+import Banner from "@/components/Banner";
 import ColoredSeparator from "@/components/DynamicAssets/ColoredSeparator";
 import Destinations from "./Destinations";
 import Experience from "./Experience";
@@ -14,6 +15,11 @@ const HomeView = () => {
         <Destinations />
       </div>
       <Gallery />
+      <div className="px-4 lg:px-44 py-20">
+        <section>
+          <Banner />
+        </section>
+      </div>
     </>
   );
 };

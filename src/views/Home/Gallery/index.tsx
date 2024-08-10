@@ -46,7 +46,7 @@ const Gallery: FC = () => {
             <GalleryCard key={index} imageSrc={photo?.src} />
           ))}
           <div className="col-span-full">
-            <ColoredSeparator isWhite />
+            <ColoredSeparator isWhite={true} />
           </div>
           {photosBottom?.map((photo, index) => (
             <GalleryCard key={index} imageSrc={photo?.src} />
