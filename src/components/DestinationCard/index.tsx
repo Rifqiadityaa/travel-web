@@ -7,7 +7,6 @@ import { DestinationCardProps } from "./types";
 const DestinationCard: FC<DestinationCardProps> = ({
   itinerary,
   onClickDetailsButton,
-  isReversed,
 }) => {
   const discountPrice = itinerary.related_variant.itinerary_variant_disc_price;
   const originalPrice = itinerary.related_variant.itinerary_variant_pub_price;
@@ -20,8 +19,6 @@ const DestinationCard: FC<DestinationCardProps> = ({
         .map((gallery) => gallery.src)
     );
   }, [itinerary]);
-
-  console.log(itineraryImagesSrc);
 
   return (
     <div className="flex flex-col lg:flex-row gap-4 lg:gap-6 lg:even:flex-row-reverse">

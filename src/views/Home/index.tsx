@@ -1,5 +1,7 @@
 import Banner from "@/components/Banner";
 import ColoredSeparator from "@/components/DynamicAssets/ColoredSeparator";
+import Footer from "@/components/Footer";
+import Articles from "./Articles";
 import Destinations from "./Destinations";
 import Experience from "./Experience";
 import Gallery from "./Gallery";
@@ -9,17 +11,21 @@ const HomeView = () => {
   return (
     <>
       <Hero />
-      <div className="px-4 lg:px-44 py-20">
+      <div className="flex flex-col gap-20 px-4 lg:px-44 py-20">
         <Experience />
-        <ColoredSeparator className="mb-20" />
+        <ColoredSeparator />
         <Destinations />
       </div>
       <Gallery />
-      <div className="px-4 lg:px-44 py-20">
+      <div className="flex flex-col gap-20 px-4 lg:px-44 py-20">
         <section>
           <Banner />
         </section>
+        <Articles />
       </div>
+      <section>
+        <Footer />
+      </section>
     </>
   );
 };

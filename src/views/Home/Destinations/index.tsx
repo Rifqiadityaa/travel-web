@@ -22,18 +22,13 @@ const Destinations: FC = () => {
         </div>
       </div>
       <div className="flex flex-col gap-16 lg:gap-36">
-        {data.data.map((itinerary, index) => {
-          const isOdd = index % 2 !== 0;
-
-          return (
-            <DestinationCard
-              key={index}
-              itinerary={itinerary}
-              isReversed={isOdd}
-              onClickDetailsButton={() => {}}
-            />
-          );
-        })}
+        {data.data.map((itinerary, index) => (
+          <DestinationCard
+            key={index}
+            itinerary={itinerary}
+            onClickDetailsButton={() => {}}
+          />
+        ))}
       </div>
     </section>
   );

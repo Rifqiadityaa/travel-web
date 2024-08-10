@@ -23,11 +23,11 @@ const Gallery: FC = () => {
 
   const photosTopSrc = useMemo(() => {
     return photosTop?.map((photo) => photo?.src);
-  }, [data]);
+  }, [photosTop]);
 
   const photosBottomSrc = useMemo(() => {
     return photosBottom?.map((photo) => photo?.src);
-  }, [data]);
+  }, [photosBottom]);
 
   return (
     <section className="bg-[#D6B66B] p-4 lg:px-44 py-20">
@@ -39,7 +39,7 @@ const Gallery: FC = () => {
         download={false}
         plugins={[lgZoom, lgThumbnail]}
         elementClassNames={styles.gallery}
-        selector=".gallery-item"
+        selectWithin=".gallery-item"
       >
         <>
           {photosTop?.map((photo, index) => (
@@ -53,6 +53,8 @@ const Gallery: FC = () => {
           ))}
         </>
       </LightGallery>
+
+      {/* Mobile */}
       {photosBottomSrc && photosTopSrc && (
         <ImageSlider
           imagesSrc={[...photosTopSrc, ...photosBottomSrc]}
