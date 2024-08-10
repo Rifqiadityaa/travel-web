@@ -44,7 +44,7 @@ const Experience: FC = () => {
         ))}
       </div>
 
-      <div className="flex flex-col lg:flex-row items-center text-center lg:text-left justify-center gap-8 mb-20">
+      <div className="flex flex-col lg:flex-row items-center text-center lg:text-left justify-center gap-8">
         <Image
           src={"/assets/images/tailored_experience.png"}
           alt="image"

@@ -25,7 +25,11 @@ const Hero: FC = () => {
           selection of premium trips, ensuring comfort every step of the way
         </p>
       </div>
-      <Button text="Take me there" onClick={onClick} />
+      <Button
+        text="Take me there"
+        className="hover:bg-[#D6B66B] hover:border-[#D6B66B]"
+        onClick={onClick}
+      />
     </section>
   );
 };

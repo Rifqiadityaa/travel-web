@@ -17,8 +17,8 @@ const Destinations: FC = () => {
           Destinations
         </h1>
         <div className="flex gap-6 items-center">
-          <Button text=">" className="border-[#004040] text-[#004040]" />
-          <p>Explore more</p>
+          <Button text=">" variant="icon" />
+          <p className="uppercase text-[#004040]">Explore more</p>
         </div>
       </div>
       <div className="flex flex-col gap-16 lg:gap-36">

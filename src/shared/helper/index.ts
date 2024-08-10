@@ -32,7 +32,7 @@ export const isEmpty = (
   );
 };
 
-export const getTotalDayAndNight = (day: number) => {
+export const getTotalDayAndNight = (day: number): string => {
   const night = day - 1;
 
   if (day === 1) {
