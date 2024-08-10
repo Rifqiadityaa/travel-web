@@ -1,11 +1,35 @@
-import { FC } from "react";
+"use client";
+
+import { FC, useEffect, useState } from "react";
 import Button from "../Button";
 import HamburgerMenu from "../DynamicAssets/HamburgerMenu";
 import ZamroodLogo from "../DynamicAssets/ZamroodLogo";
 
 const Navbar: FC<NavbarProps> = ({ items, logo }) => {
+  const [navBoxVisible, setNavBoxVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 300) {
+        setNavBoxVisible(true);
+      } else {
+        setNavBoxVisible(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <nav className="flex justify-between fixed w-full max-xl:p-4 px-44 py-6 z-50 max-xl:bg-white">
+    <nav
+      className={`flex justify-between fixed w-full p-4 xl:px-44 py-6 z-50 max-xl:bg-white transition-all ease-in-out duration-500 ${
+        navBoxVisible ? "xl:bg-[#004040]" : "xl:bg-transparent"
+      }`}
+    >
       {logo || <ZamroodLogo />}
       <div className="max-[1400px]:hidden flex">
         <ul className="flex gap-6 ">
@@ -18,7 +42,12 @@ const Navbar: FC<NavbarProps> = ({ items, logo }) => {
               {item.label}
             </a>
           ))}
-          <Button text="Need Assistance?" />
+          <Button
+            text="Need Assistance?"
+            className={`${
+              navBoxVisible ? "hover:bg-[#D6B66B] hover:border-[#D6B66B]" : ""
+            }`}
+          />
         </ul>
       </div>
 
