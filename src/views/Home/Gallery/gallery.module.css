@@ -1,0 +1,9 @@
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+
+  @media (max-width: 1023px) {
+    display: none;
+  }
+}

@@ -1,8 +1,7 @@
 import { getTotalDayAndNight } from "@/shared/helper";
-import Image from "next/image";
-import { FC } from "react";
-import { twMerge } from "tailwind-merge";
+import { FC, useMemo } from "react";
 import Button from "../Button";
+import ImageSlider from "../ImageSlider";
 import { DestinationCardProps } from "./types";
 
 const DestinationCard: FC<DestinationCardProps> = ({
@@ -13,20 +12,23 @@ const DestinationCard: FC<DestinationCardProps> = ({
   const discountPrice = itinerary.related_variant.itinerary_variant_disc_price;
   const originalPrice = itinerary.related_variant.itinerary_variant_pub_price;
 
+  const itineraryImagesSrc = useMemo(() => {
+    return (
+      itinerary.related_galleries
+        //slice because too many data (for demo purposes)
+        .slice(0, 4)
+        .map((gallery) => gallery.src)
+    );
+  }, [itinerary]);
+
+  console.log(itineraryImagesSrc);
+
   return (
     <div className="flex flex-col lg:flex-row gap-4 lg:gap-6 lg:even:flex-row-reverse">
-      <div
-        className={twMerge(
-          `w-full relative aspect-[4/3] max-h-[256px] lg:max-h-[354px] lg:w-1/2`
-        )}
-      >
-        <Image
-          src={itinerary.related_galleries[0].src}
-          alt="photo"
-          fill
-          className="object-cover"
-        />
-      </div>
+      <ImageSlider
+        imagesSrc={itineraryImagesSrc}
+        className="w-full relative aspect-[4/3] max-h-[256px] lg:max-h-[354px] lg:w-1/2"
+      />
       <div className="flex flex-col gap-6 lg:gap-0 justify-between text-[#004040] lg:w-1/2">
         <div className="flex flex-col gap-2">
           <p className="text-sm lg:text-base uppercase">

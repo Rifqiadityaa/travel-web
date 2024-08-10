@@ -11,7 +11,7 @@ const Destinations: FC = () => {
   if (!data) return null;
 
   return (
-    <div>
+    <section>
       <div className="flex flex-col lg:flex-row items-start lg:items-center gap-6 mb-12 lg:mb-24">
         <h1 className="text-xl lg:text-4xl font-unbounded font-bold">
           Destinations
@@ -35,7 +35,7 @@ const Destinations: FC = () => {
           );
         })}
       </div>
-    </div>
+    </section>
   );
 };
 
