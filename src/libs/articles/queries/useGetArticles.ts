@@ -3,7 +3,9 @@ import { useQuery, UseQueryOptions } from "react-query";
 import { GetArticlesReponse } from "../types";
 
 const fetchArticles = async () => {
-  const response = await fetch("https://pandooin.com/api/zamrood/article");
+  const response = await fetch(
+    `${process.env.NEXT_PUBLIC_BASE_API_URL}/zamrood/article`
+  );
   const data = await response.json();
   return data as GetArticlesReponse;
 };

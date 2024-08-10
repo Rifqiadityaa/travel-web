@@ -12,7 +12,10 @@ const Hero: FC = () => {
   };
 
   return (
-    <section className="h-screen bg-[url('/assets/images/hero_bg.webp')] bg-cover w-full flex flex-col max-lg:justify-center justify-end max-lg:items-center items-start gap-6 max-lg:px-4 p-44 max-lg:text-center">
+    <section
+      id="hero"
+      className="h-screen bg-[url('/assets/images/hero_bg.webp')] bg-cover w-full flex flex-col max-lg:justify-center justify-end max-lg:items-center items-start gap-6 max-lg:px-4 p-44 max-lg:text-center"
+    >
       <div>
         <h5 className="max-lg:text-7xl text-9xl font-thesignature max-lg:-mb-6 -mb-14 text-[#D6B66B]">
           Premium Travel

@@ -1,4 +1,5 @@
 import Button from "@/components/Button";
+import Link from "next/link";
 import { FC } from "react";
 import { DrawerProps } from "./types";
 
@@ -25,13 +26,16 @@ const Drawer: FC<DrawerProps> = ({ items, open, setDrawerOpen }) => {
         }`}
       >
         {items.map((item, index) => (
-          <a
+          <Link
             key={index}
             href={item.link}
             className="text-base font-bold text-white px-6 py-4 border-b-2 border-transparent hover:border-white transition-all ease-in-out duration-300"
+            onClick={() => {
+              setDrawerOpen(false);
+            }}
           >
             {item.label}
-          </a>
+          </Link>
         ))}
         <Button
           text="Need Assistance?"

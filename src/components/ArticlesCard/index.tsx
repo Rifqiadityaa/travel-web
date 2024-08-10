@@ -1,10 +1,11 @@
 import Image from "next/image";
+import Link from "next/link";
 import { FC } from "react";
 import { ArticledCardProps } from "./types";
 
 const ArticlesCard: FC<ArticledCardProps> = ({ image, title, href }) => {
   return (
-    <a
+    <Link
       href={href || "#"}
       className="w-full flex flex-col first:lg:row-span-2 first:lg:col-span-2"
     >
@@ -19,7 +20,7 @@ const ArticlesCard: FC<ArticledCardProps> = ({ image, title, href }) => {
       <div className="bg-[#0B7373] py-6 px-4">
         <p className="line-clamp-2 font-bold text-base text-white">{title}</p>
       </div>
-    </a>
+    </Link>
   );
 };
 

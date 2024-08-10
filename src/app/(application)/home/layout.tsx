@@ -11,19 +11,19 @@ const ApplicationLayout = ({
         items={[
           {
             label: "Homepage",
-            link: "/home",
+            link: "#",
           },
           {
             label: "Customize Your Trip",
-            link: "#",
+            link: "#customize-experience",
           },
           {
             label: "Destination",
-            link: "#",
+            link: "#destinations",
           },
           {
             label: "Article",
-            link: "#",
+            link: "#articles",
           },
         ]}
       />

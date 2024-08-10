@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { FC, useEffect, useState } from "react";
 import Button from "../Button";
 import HamburgerMenu from "../DynamicAssets/HamburgerMenu";
@@ -42,13 +43,13 @@ const Navbar: FC<NavbarProps> = ({ items, logo }) => {
         <div className="max-[1400px]:hidden flex">
           <ul className="flex gap-6 ">
             {items.map((item, index) => (
-              <a
+              <Link
                 key={index}
                 href={item.link}
                 className="text-base font-bold text-white px-6 py-4 border-b-2 border-transparent hover:border-white transition-all ease-in-out duration-300"
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
             <Button
               text="Need Assistance?"

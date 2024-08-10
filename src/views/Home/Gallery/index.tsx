@@ -39,7 +39,7 @@ const Gallery: FC = () => {
         download={false}
         plugins={[lgZoom, lgThumbnail]}
         elementClassNames={styles.gallery}
-        selector=".gallery-item"
+        selectWithin=".galler"
       >
         <>
           {photosTop?.map((photo, index) => (

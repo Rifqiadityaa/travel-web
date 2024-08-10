@@ -4,7 +4,7 @@ import { BaseReponse } from "../types";
 
 const fetchItineraries = async () => {
   const response = await fetch(
-    "https://pandooin.com/api/zamrood/itinerary?highlight=true"
+    `${process.env.NEXT_PUBLIC_BASE_API_URL}/zamrood/itinerary?highlight=true`
   );
   const data = await response.json();
   return data as BaseReponse;
