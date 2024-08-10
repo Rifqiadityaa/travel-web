@@ -10,10 +10,10 @@ const ExperienceCard: FC<ExperienceCardProps> = ({
     <div className="flex flex-col items-center text-center gap-9">
       {icon}
       <div>
-        <h5 className="text-[#0B7373] font-bold mb-2 text-lg uppercase">
+        <h5 className="text-[#0B7373] font-bold mb-2 text-base lg:text-2xl uppercase">
           {title}
         </h5>
-        <p className="leading-5 text-sm">{description}</p>
+        <p className="leading-5 text-sm lg:text-base">{description}</p>
       </div>
     </div>
   );

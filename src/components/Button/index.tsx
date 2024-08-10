@@ -1,7 +1,8 @@
 import { FC } from "react";
+import { twMerge } from "tailwind-merge";
 import { ButtonProps } from "./types";
 
-const Button: FC<ButtonProps> = ({ text, onClick, variant }) => {
+const Button: FC<ButtonProps> = ({ text, onClick, variant, className }) => {
   const isFilled = variant === "filled";
 
   const getButtonStyleByVariant = () => {
@@ -12,10 +13,9 @@ const Button: FC<ButtonProps> = ({ text, onClick, variant }) => {
 
   return (
     <button
-      className={
-        "text-white px-6 py-3 rounded-full border-2 transition-all duration-300 ease-in-out w-fit " +
-        getButtonStyleByVariant()
-      }
+      className={twMerge(
+        `text-white px-6 py-3 rounded-full border-2 transition-all duration-300 ease-in-out w-fit ${getButtonStyleByVariant()} ${className}`
+      )}
       onClick={onClick}
     >
       {text}
