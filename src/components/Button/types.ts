@@ -1,6 +1,7 @@
 export interface ButtonProps {
-  text: string;
+  text?: string;
   onClick?: () => void;
   variant?: "default" | "filled" | "icon";
   className?: string;
+  icon?: JSX.Element;
 }

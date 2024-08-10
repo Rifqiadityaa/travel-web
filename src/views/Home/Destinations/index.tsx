@@ -4,6 +4,7 @@ import Button from "@/components/Button";
 import DestinationCard from "@/components/DestinationCard";
 import useGetItineraries from "@/libs/Itineraries/queries/useGetItineraries";
 import { FC } from "react";
+import { IoIosArrowForward } from "react-icons/io";
 
 const Destinations: FC = () => {
   const { data } = useGetItineraries();
@@ -17,7 +18,7 @@ const Destinations: FC = () => {
           Destinations
         </h1>
         <div className="flex gap-6 items-center">
-          <Button text=">" variant="icon" />
+          <Button icon={<IoIosArrowForward />} variant="icon" />
           <p className="uppercase text-[#004040]">Explore more</p>
         </div>
       </div>
@@ -26,7 +27,9 @@ const Destinations: FC = () => {
           <DestinationCard
             key={index}
             itinerary={itinerary}
-            onClickDetailsButton={() => {}}
+            onClickDetailsButton={() => {
+              window.location.href = `https://www.zamrood.com/destination/${itinerary.itinerary_slug}`;
+            }}
           />
         ))}
       </div>

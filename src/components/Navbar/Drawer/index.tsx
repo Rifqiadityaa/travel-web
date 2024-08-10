@@ -1,6 +1,7 @@
 import Button from "@/components/Button";
 import Link from "next/link";
 import { FC } from "react";
+import { AiOutlineClose } from "react-icons/ai";
 import { DrawerProps } from "./types";
 
 const Drawer: FC<DrawerProps> = ({ items, open, setDrawerOpen }) => {
@@ -12,7 +13,7 @@ const Drawer: FC<DrawerProps> = ({ items, open, setDrawerOpen }) => {
     >
       {open && (
         <Button
-          text="x"
+          icon={<AiOutlineClose />}
           variant="icon"
           className="border-white text-white absolute top-6 right-6"
           onClick={() => {

@@ -1,3 +1,5 @@
 export interface BannerProps {
-  bgImage?: string;
+  description: string;
+  href: string;
+  bgImage: string;
 }

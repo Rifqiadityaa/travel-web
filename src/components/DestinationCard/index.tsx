@@ -8,7 +8,6 @@ const DestinationCard: FC<DestinationCardProps> = ({
   itinerary,
   onClickDetailsButton,
 }) => {
-  const discountPrice = itinerary.related_variant.itinerary_variant_disc_price;
   const originalPrice = itinerary.related_variant.itinerary_variant_pub_price;
 
   const itineraryImagesSrc = useMemo(() => {
@@ -42,7 +41,7 @@ const DestinationCard: FC<DestinationCardProps> = ({
         <div className="flex justify-between items-end">
           <div>
             <p className="text-xs lg:text-base text-[#004040]">Start from</p>
-            {/* {!isEmpty(discountPrice) && <p>{discountPrice}</p>} */}
+
             <p className="text-[#0B7373] font-bold font-unbounded text-lg lg:text-xl">
               {`IDR ${new Intl.NumberFormat("id").format(
                 parseInt(originalPrice)
@@ -53,6 +52,7 @@ const DestinationCard: FC<DestinationCardProps> = ({
             <Button
               text="See Details"
               className="h-fit border-[#004040] text-[#004040] hover:text-white p-3 font-bold text-sm"
+              onClick={onClickDetailsButton}
             />
           </div>
         </div>

@@ -3,18 +3,23 @@
 import Button from "@/components/Button";
 import { useRouter } from "next/navigation";
 import { FC } from "react";
+import { HeroProps } from "./types";
 
-const Hero: FC = () => {
+const Hero: FC<HeroProps> = ({ bgImage }) => {
   const router = useRouter();
 
   const onClick = () => {
-    router.push("/home");
+    router.push("/home#destinations");
   };
 
   return (
     <section
       id="hero"
-      className="h-screen bg-[url('/assets/images/hero_bg.webp')] bg-cover w-full flex flex-col max-lg:justify-center justify-end max-lg:items-center items-start gap-6 max-lg:px-4 p-44 max-lg:text-center"
+      className={`h-screen w-full flex flex-col max-lg:justify-center justify-end max-lg:items-center items-start gap-6 max-lg:px-4 p-44 max-lg:text-center`}
+      style={{
+        background: `url(${bgImage})`,
+        backgroundSize: "cover",
+      }}
     >
       <div>
         <h5 className="max-lg:text-7xl text-9xl font-thesignature max-lg:-mb-6 -mb-14 text-[#D6B66B]">
